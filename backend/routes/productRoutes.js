@@ -70,7 +70,7 @@ router.put('/:id', async (req, res) => {
     const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true, runValidators: true } // Trả về data mới và chạy lại các rule validate (min: 0)
+      { new: true, runValidators: true }
     );
     if (!updatedProduct) return res.status(404).json({ message: "Không tìm thấy sản phẩm để cập nhật" });
     res.json(updatedProduct);

@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
-// Lưu số đếm hiện tại cho từng collection
 const counterSchema = new mongoose.Schema({
-  _id: { type: String },       // tên counter, VD: 'productId'
+  _id: { type: String },
   seq: { type: Number, default: 0 }
 });
 
